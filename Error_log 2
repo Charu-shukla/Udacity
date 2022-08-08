@@ -1,0 +1,87 @@
+*** Reading local file: /root/airflow/logs/etl_task/create_redshift_tables/2019-09-16T00:00:00+00:00/4.log
+[2022-08-08 18:20:49,295] {models.py:1359} INFO - Dependencies all met for <TaskInstance: etl_task.create_redshift_tables 2019-09-16T00:00:00+00:00 [queued]>
+[2022-08-08 18:20:49,411] {models.py:1359} INFO - Dependencies all met for <TaskInstance: etl_task.create_redshift_tables 2019-09-16T00:00:00+00:00 [queued]>
+[2022-08-08 18:20:49,411] {models.py:1571} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 4 of 4
+--------------------------------------------------------------------------------
+
+[2022-08-08 18:20:49,835] {models.py:1593} INFO - Executing <Task(PythonOperator): create_redshift_tables> on 2019-09-16T00:00:00+00:00
+[2022-08-08 18:20:49,836] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run etl_task create_redshift_tables 2019-09-16T00:00:00+00:00 --job_id 165 --raw -sd DAGS_FOLDER/etl_task.py --cfg_path /tmp/tmp5yqfoffq']
+[2022-08-08 18:20:58,590] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:20:58,590] {settings.py:174} INFO - settings.configure_orm(): Using pool settings. pool_size=5, pool_recycle=1800, pid=13942
+[2022-08-08 18:21:08,816] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:08,815] {__init__.py:51} INFO - Using executor LocalExecutor
+[2022-08-08 18:21:13,450] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:13,390] {models.py:273} INFO - Filling up the DagBag from /home/workspace/airflow/dags/etl_task.py
+[2022-08-08 18:21:13,562] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:13,554] {models.py:2558} WARNING - schedule_interval is used for <Task(DummyOperator): Begin_execution>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:21:13,587] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:13,586] {models.py:2558} WARNING - schedule_interval is used for <Task(PythonOperator): create_redshift_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:21:13,629] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:13,588] {models.py:2558} WARNING - schedule_interval is used for <Task(StageToRedshiftOperator): stage_events>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:21:13,630] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:13,629] {models.py:2558} WARNING - schedule_interval is used for <Task(StageToRedshiftOperator): Stage_songs>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:21:13,667] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:13,630] {models.py:2558} WARNING - schedule_interval is used for <Task(LoadFactOperator): load_songplays_fact_table>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:21:13,669] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:13,668] {models.py:2558} WARNING - schedule_interval is used for <Task(LoadDimensionOperator): load_user_dim_table>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:21:13,705] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:13,705] {models.py:2558} WARNING - schedule_interval is used for <Task(LoadDimensionOperator): load_song_dim_table>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:21:13,705] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:13,705] {models.py:2558} WARNING - schedule_interval is used for <Task(LoadDimensionOperator): load_artist_dim_table>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:21:13,706] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:13,706] {models.py:2558} WARNING - schedule_interval is used for <Task(LoadDimensionOperator): load_time_dim_table>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:21:13,707] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:13,707] {models.py:2558} WARNING - schedule_interval is used for <Task(DataQualityOperator): run_data_quality_checks>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:21:13,767] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:13,767] {models.py:2558} WARNING - schedule_interval is used for <Task(DummyOperator): Stop_execution>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:21:14,309] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables [2022-08-08 18:21:14,308] {cli.py:520} INFO - Running <TaskInstance: etl_task.create_redshift_tables 2019-09-16T00:00:00+00:00 [running]> on host ac69a97ce396
+[2022-08-08 18:21:14,806] {python_operator.py:95} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=etl_task
+AIRFLOW_CTX_TASK_ID=create_redshift_tables
+AIRFLOW_CTX_EXECUTION_DATE=2019-09-16T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-09-16T00:00:00+00:00
+[2022-08-08 18:21:15,755] {logging_mixin.py:95} INFO - [2022-08-08 18:21:15,736] {base_hook.py:83} INFO - Using connection to: id: redshift. Host: redshift-cluster-1.cl8u99yaeuv0.us-west-2.redshift.amazonaws.com, Port: 5439, Schema: dev, Login: awsuser, Password: XXXXXXXX, extra: {}
+[2022-08-08 18:23:25,295] {models.py:1788} ERROR - could not connect to server: Connection timed out
+	Is the server running on host "redshift-cluster-1.cl8u99yaeuv0.us-west-2.redshift.amazonaws.com" (172.31.48.175) and accepting
+	TCP/IP connections on port 5439?
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.6/site-packages/airflow/models.py", line 1657, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/opt/conda/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 103, in execute
+    return_value = self.execute_callable()
+  File "/opt/conda/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 108, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/workspace/airflow/dags/etl_task.py", line 32, in create_tables
+    redshift.run(queries)
+  File "/opt/conda/lib/python3.6/site-packages/airflow/hooks/dbapi_hook.py", line 158, in run
+    with closing(self.get_conn()) as conn:
+  File "/opt/conda/lib/python3.6/site-packages/airflow/hooks/postgres_hook.py", line 60, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+  File "/opt/conda/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection timed out
+	Is the server running on host "redshift-cluster-1.cl8u99yaeuv0.us-west-2.redshift.amazonaws.com" (172.31.48.175) and accepting
+	TCP/IP connections on port 5439?
+
+[2022-08-08 18:23:25,298] {models.py:1817} INFO - All retries failed; marking task as FAILED
+[2022-08-08 18:23:25,770] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables Traceback (most recent call last):
+[2022-08-08 18:23:25,770] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables   File "/opt/conda/bin/airflow", line 32, in <module>
+[2022-08-08 18:23:25,770] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables     args.func(args)
+[2022-08-08 18:23:25,770] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables   File "/opt/conda/lib/python3.6/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2022-08-08 18:23:25,770] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables     return f(*args, **kwargs)
+[2022-08-08 18:23:25,770] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables   File "/opt/conda/lib/python3.6/site-packages/airflow/bin/cli.py", line 526, in run
+[2022-08-08 18:23:25,770] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables     _run(args, dag, ti)
+[2022-08-08 18:23:25,770] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables   File "/opt/conda/lib/python3.6/site-packages/airflow/bin/cli.py", line 445, in _run
+[2022-08-08 18:23:25,770] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables     pool=args.pool,
+[2022-08-08 18:23:25,770] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables   File "/opt/conda/lib/python3.6/site-packages/airflow/utils/db.py", line 73, in wrapper
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables     return func(*args, **kwargs)
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables   File "/opt/conda/lib/python3.6/site-packages/airflow/models.py", line 1657, in _run_raw_task
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables     result = task_copy.execute(context=context)
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables   File "/opt/conda/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 103, in execute
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables     return_value = self.execute_callable()
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables   File "/opt/conda/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 108, in execute_callable
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables     return self.python_callable(*self.op_args, **self.op_kwargs)
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables   File "/home/workspace/airflow/dags/etl_task.py", line 32, in create_tables
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables     redshift.run(queries)
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables   File "/opt/conda/lib/python3.6/site-packages/airflow/hooks/dbapi_hook.py", line 158, in run
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables     with closing(self.get_conn()) as conn:
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables   File "/opt/conda/lib/python3.6/site-packages/airflow/hooks/postgres_hook.py", line 60, in get_conn
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables     self.conn = psycopg2.connect(**conn_args)
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables   File "/opt/conda/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables     conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables psycopg2.OperationalError: could not connect to server: Connection timed out
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables 	Is the server running on host "redshift-cluster-1.cl8u99yaeuv0.us-west-2.redshift.amazonaws.com" (172.31.48.175) and accepting
+[2022-08-08 18:23:25,771] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables 	TCP/IP connections on port 5439?
+[2022-08-08 18:23:25,772] {base_task_runner.py:101} INFO - Job 165: Subtask create_redshift_tables 
+[2022-08-08 18:23:30,663] {logging_mixin.py:95} INFO - [2022-08-08 18:23:30,663] {jobs.py:2595} WARNING - State of this instance has been externally set to failed. Taking the poison pill.
+[2022-08-08 18:23:30,837] {helpers.py:250} INFO - Sending Signals.SIGTERM to GPID 13942
+[2022-08-08 18:23:30,988] {helpers.py:232} INFO - Process psutil.Process(pid=13942 (terminated)) (13942) terminated with exit code -15
+[2022-08-08 18:23:30,990] {logging_mixin.py:95} INFO - [2022-08-08 18:23:30,989] {jobs.py:2527} INFO - Task exited with return code 0
