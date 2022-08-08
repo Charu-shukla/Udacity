@@ -1,0 +1,72 @@
+*** Reading local file: /root/airflow/logs/etl_task/stage_events/2019-09-15T00:00:00+00:00/4.log
+[2022-08-08 18:19:41,754] {models.py:1359} INFO - Dependencies all met for <TaskInstance: etl_task.stage_events 2019-09-15T00:00:00+00:00 [queued]>
+[2022-08-08 18:19:41,779] {models.py:1359} INFO - Dependencies all met for <TaskInstance: etl_task.stage_events 2019-09-15T00:00:00+00:00 [queued]>
+[2022-08-08 18:19:41,779] {models.py:1571} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 4 of 4
+--------------------------------------------------------------------------------
+
+[2022-08-08 18:19:41,793] {models.py:1593} INFO - Executing <Task(StageToRedshiftOperator): stage_events> on 2019-09-15T00:00:00+00:00
+[2022-08-08 18:19:41,793] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run etl_task stage_events 2019-09-15T00:00:00+00:00 --job_id 150 --raw -sd DAGS_FOLDER/etl_task.py --cfg_path /tmp/tmp9ervf1nd']
+[2022-08-08 18:19:43,860] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:43,859] {settings.py:174} INFO - settings.configure_orm(): Using pool settings. pool_size=5, pool_recycle=1800, pid=13241
+[2022-08-08 18:19:45,705] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:45,704] {__init__.py:51} INFO - Using executor LocalExecutor
+[2022-08-08 18:19:46,477] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:46,477] {models.py:273} INFO - Filling up the DagBag from /home/workspace/airflow/dags/etl_task.py
+[2022-08-08 18:19:46,493] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:46,492] {models.py:2558} WARNING - schedule_interval is used for <Task(DummyOperator): Begin_execution>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:19:46,499] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:46,499] {models.py:2558} WARNING - schedule_interval is used for <Task(PythonOperator): create_redshift_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:19:46,501] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:46,500] {models.py:2558} WARNING - schedule_interval is used for <Task(StageToRedshiftOperator): stage_events>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:19:46,501] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:46,501] {models.py:2558} WARNING - schedule_interval is used for <Task(StageToRedshiftOperator): Stage_songs>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:19:46,502] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:46,501] {models.py:2558} WARNING - schedule_interval is used for <Task(LoadFactOperator): load_songplays_fact_table>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:19:46,507] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:46,507] {models.py:2558} WARNING - schedule_interval is used for <Task(LoadDimensionOperator): load_user_dim_table>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:19:46,508] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:46,508] {models.py:2558} WARNING - schedule_interval is used for <Task(LoadDimensionOperator): load_song_dim_table>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:19:46,508] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:46,508] {models.py:2558} WARNING - schedule_interval is used for <Task(LoadDimensionOperator): load_artist_dim_table>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:19:46,508] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:46,508] {models.py:2558} WARNING - schedule_interval is used for <Task(LoadDimensionOperator): load_time_dim_table>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:19:46,509] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:46,509] {models.py:2558} WARNING - schedule_interval is used for <Task(DataQualityOperator): run_data_quality_checks>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:19:46,510] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:46,509] {models.py:2558} WARNING - schedule_interval is used for <Task(DummyOperator): Stop_execution>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2022-08-08 18:19:46,629] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events [2022-08-08 18:19:46,629] {cli.py:520} INFO - Running <TaskInstance: etl_task.stage_events 2019-09-15T00:00:00+00:00 [running]> on host ac69a97ce396
+[2022-08-08 18:19:47,252] {stage_redshift.py:43} INFO - Truncating Redshift table
+[2022-08-08 18:19:47,283] {logging_mixin.py:95} INFO - [2022-08-08 18:19:47,278] {base_hook.py:83} INFO - Using connection to: id: redshift. Host: redshift-cluster-1.cl8u99yaeuv0.us-west-2.redshift.amazonaws.com, Port: 5439, Schema: dev, Login: awsuser, Password: XXXXXXXX, extra: {}
+[2022-08-08 18:21:57,227] {models.py:1788} ERROR - could not connect to server: Connection timed out
+	Is the server running on host "redshift-cluster-1.cl8u99yaeuv0.us-west-2.redshift.amazonaws.com" (172.31.48.175) and accepting
+	TCP/IP connections on port 5439?
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.6/site-packages/airflow/models.py", line 1657, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/workspace/airflow/plugins/operators/stage_redshift.py", line 44, in execute
+    redshift.run("DELETE FROM {}".format(self.table))
+  File "/opt/conda/lib/python3.6/site-packages/airflow/hooks/dbapi_hook.py", line 158, in run
+    with closing(self.get_conn()) as conn:
+  File "/opt/conda/lib/python3.6/site-packages/airflow/hooks/postgres_hook.py", line 60, in get_conn
+    self.conn = psycopg2.connect(**conn_args)
+  File "/opt/conda/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection timed out
+	Is the server running on host "redshift-cluster-1.cl8u99yaeuv0.us-west-2.redshift.amazonaws.com" (172.31.48.175) and accepting
+	TCP/IP connections on port 5439?
+
+[2022-08-08 18:21:57,230] {models.py:1817} INFO - All retries failed; marking task as FAILED
+[2022-08-08 18:21:57,305] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events Traceback (most recent call last):
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events   File "/opt/conda/bin/airflow", line 32, in <module>
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events     args.func(args)
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events   File "/opt/conda/lib/python3.6/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events     return f(*args, **kwargs)
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events   File "/opt/conda/lib/python3.6/site-packages/airflow/bin/cli.py", line 526, in run
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events     _run(args, dag, ti)
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events   File "/opt/conda/lib/python3.6/site-packages/airflow/bin/cli.py", line 445, in _run
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events     pool=args.pool,
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events   File "/opt/conda/lib/python3.6/site-packages/airflow/utils/db.py", line 73, in wrapper
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events     return func(*args, **kwargs)
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events   File "/opt/conda/lib/python3.6/site-packages/airflow/models.py", line 1657, in _run_raw_task
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events     result = task_copy.execute(context=context)
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events   File "/home/workspace/airflow/plugins/operators/stage_redshift.py", line 44, in execute
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events     redshift.run("DELETE FROM {}".format(self.table))
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events   File "/opt/conda/lib/python3.6/site-packages/airflow/hooks/dbapi_hook.py", line 158, in run
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events     with closing(self.get_conn()) as conn:
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events   File "/opt/conda/lib/python3.6/site-packages/airflow/hooks/postgres_hook.py", line 60, in get_conn
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events     self.conn = psycopg2.connect(**conn_args)
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events   File "/opt/conda/lib/python3.6/site-packages/psycopg2/__init__.py", line 130, in connect
+[2022-08-08 18:21:57,306] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events     conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+[2022-08-08 18:21:57,307] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events psycopg2.OperationalError: could not connect to server: Connection timed out
+[2022-08-08 18:21:57,307] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events 	Is the server running on host "redshift-cluster-1.cl8u99yaeuv0.us-west-2.redshift.amazonaws.com" (172.31.48.175) and accepting
+[2022-08-08 18:21:57,307] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events 	TCP/IP connections on port 5439?
+[2022-08-08 18:21:57,307] {base_task_runner.py:101} INFO - Job 150: Subtask stage_events 
+[2022-08-08 18:21:58,954] {logging_mixin.py:95} INFO - [2022-08-08 18:21:58,952] {jobs.py:2527} INFO - Task exited with return code 1
